@@ -1,25 +1,29 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 import Nav from './Nav'
-import Dogs from './Dogs'
 import duke from './assets/duke.jpg';
 import perry from './assets/perry.jpg';
 import doggies from'./assets/doggies.jpg';
 import tubby from './assets/tubby.jpg';
 import whiskey from './assets/whiskey.jpg';
+import Dogs from './Dogs';
 
 function App({dogs}) {
   return (
     <div className="App">
     <h1>Find your next doggy friend here!</h1>
     <BrowserRouter>
-    <Nav dogs={dogs} />
-    <Route dogs={dogs} />
-    </BrowserRouter>
-
+      <Nav dogs={dogs} />
+      <Route exact path ={dogs} />
+      <Dogs />
+      </BrowserRouter>
+    
     </div>
   );
 }
+
+export default App;
+
 
 App.defaultProps = {
   dogs: [
@@ -76,4 +80,3 @@ App.defaultProps = {
   ]
 }
 
-export default App;

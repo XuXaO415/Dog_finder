@@ -1,10 +1,17 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-function Nav() {
+function Nav({dogs}) {
   return (
     <div>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        </nav>
+        <h1>Dogs</h1>
+        <ul>
+            {dogs.map(dog => (
+                <li key={dog.name}>
+                    <Link to={`/dogs/${dog.name}`}>{dog.name}</Link>
+                </li>
+            ))}
+        </ul>å
         </div>
     );
   }
