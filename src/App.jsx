@@ -6,23 +6,29 @@ import perry from './assets/perry.jpg';
 import doggies from'./assets/doggies.jpg';
 import tubby from './assets/tubby.jpg';
 import whiskey from './assets/whiskey.jpg';
-import Dogs from './Dogs';
-
+// import Dogs from './Dogs';
 function App({dogs}) {
   return (
     <div className="App">
-    <h1>Find your next doggy friend here!</h1>
     <BrowserRouter>
-      <Nav dogs={dogs} />
-      <Route exact path ={dogs} />
-      <Dogs />
-      </BrowserRouter>
-    
+    <Nav dogs={dogs} />
+    <Route dogs={dogs}>
+    </Route>
+    {/* <Switch> */}
+      {/* <Route exact path="/dogs">
+        <Dogs />
+      </Route>
+      <Route path="/dogs/:name">
+        <DogDetails dogs={dogs} />
+      </Route>
+      <Route exact path="/dogs"><Dogs />
+      </Route> */}
+    {/* </Switch> */}
+    </BrowserRouter>
     </div>
   );
 }
 
-export default App;
 
 
 App.defaultProps = {
@@ -73,10 +79,11 @@ App.defaultProps = {
       src: doggies,
       facts: [
         "Kona loves belly rubs.",
-        "Lucy is cuddle bug",
+        "Lucy is a straight up cuddle bug",
         "Kona sometimes farts herself awake but blames Lucy."
       ]
     }
   ]
 }
 
+export default App;
