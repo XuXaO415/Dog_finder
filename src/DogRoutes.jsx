@@ -6,7 +6,7 @@ import DogList from "./DogList";
 function DogRoutes({ dogs }) {
     return (
         <Route>
-            <Route exact path="/dogs">
+            <Route exact path="/dogs/">
                 <DogList dogs={dogs} />
             </Route>
             <Route path="/dogs/:name">

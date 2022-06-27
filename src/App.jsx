@@ -10,39 +10,7 @@ import whiskey from './assets/whiskey.jpg';
 import Dogs from './Dogs';
 import DogDetails from './DogDetails';
 import DogList from './DogList';
-// function App({dogs}) {
-//   return (
-//     <div className="App">
-//     <BrowserRouter>
-//     <Nav />
-//     <Route exact path="/dogs" />
-//     <Dogs />
- 
-    
-// {/* 
-//     <Route path="/dogs/:name" component={DogDetails} />
-//     <Route path="/dogs" component={DogList} />
-//     <Route path="/" component={Nav} /> */}
 
-
-//     {/* <Nav dogs={dogs} />
-//     <Route dogs={dogs}>
-//       <Route path="/dogs/:name" component={Dogs} />
-//     </Route> */}
-//     {/* <Switch> */}
-//       {/* <Route exact path="/dogs">
-//         <Dogs />
-//       </Route>
-//       <Route path="/dogs/:name">
-//         <DogDetails dogs={dogs} />
-//       </Route>
-//       <Route exact path="/dogs"><Dogs />
-//       </Route> */}
-//     {/* </Switch> */}
-//     </BrowserRouter>
-//     </div>
-//   );
-// }
 
 function App({dogs}) {
   return (
