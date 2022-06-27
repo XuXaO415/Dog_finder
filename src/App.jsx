@@ -48,10 +48,8 @@ function App({dogs}) {
   return (
     <div>
       <BrowserRouter>
-        {/* <Nav dogs={dogs} /> */}
-   
+        <Nav dogs={dogs} />
           <DogRoutes dogs={dogs} />
-   
       </BrowserRouter>
     </div>
   );

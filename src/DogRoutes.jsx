@@ -1,5 +1,5 @@
 import React from "react";
-import {Route, BrowserRouter, Navigate} from "react-router-dom";
+import {Route, Redirect} from "react-router-dom";
 import DogDetails from "./DogDetails";
 import DogList from "./DogList";
 
@@ -12,7 +12,7 @@ function DogRoutes({ dogs }) {
             <Route path="/dogs/:name">
                 <DogDetails dogs={dogs} />
             </Route>
-            <Navigate to="/dogs" />
+            <Redirect to="/dogs" />
         </Route>
     );
 }
