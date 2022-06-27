@@ -1,34 +1,61 @@
 import React from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
+import DogRoutes from './DogRoutes';
 import Nav from './Nav'
 import duke from './assets/duke.jpg';
 import perry from './assets/perry.jpg';
 import doggies from'./assets/doggies.jpg';
 import tubby from './assets/tubby.jpg';
 import whiskey from './assets/whiskey.jpg';
-// import Dogs from './Dogs';
+import Dogs from './Dogs';
+import DogDetails from './DogDetails';
+import DogList from './DogList';
+// function App({dogs}) {
+//   return (
+//     <div className="App">
+//     <BrowserRouter>
+//     <Nav />
+//     <Route exact path="/dogs" />
+//     <Dogs />
+ 
+    
+// {/* 
+//     <Route path="/dogs/:name" component={DogDetails} />
+//     <Route path="/dogs" component={DogList} />
+//     <Route path="/" component={Nav} /> */}
+
+
+//     {/* <Nav dogs={dogs} />
+//     <Route dogs={dogs}>
+//       <Route path="/dogs/:name" component={Dogs} />
+//     </Route> */}
+//     {/* <Switch> */}
+//       {/* <Route exact path="/dogs">
+//         <Dogs />
+//       </Route>
+//       <Route path="/dogs/:name">
+//         <DogDetails dogs={dogs} />
+//       </Route>
+//       <Route exact path="/dogs"><Dogs />
+//       </Route> */}
+//     {/* </Switch> */}
+//     </BrowserRouter>
+//     </div>
+//   );
+// }
+
 function App({dogs}) {
   return (
-    <div className="App">
-    <BrowserRouter>
-    <Nav dogs={dogs} />
-    <Route dogs={dogs}>
-    </Route>
-    {/* <Switch> */}
-      {/* <Route exact path="/dogs">
-        <Dogs />
-      </Route>
-      <Route path="/dogs/:name">
-        <DogDetails dogs={dogs} />
-      </Route>
-      <Route exact path="/dogs"><Dogs />
-      </Route> */}
-    {/* </Switch> */}
-    </BrowserRouter>
+    <div>
+      <BrowserRouter>
+        {/* <Nav dogs={dogs} /> */}
+   
+          <DogRoutes dogs={dogs} />
+   
+      </BrowserRouter>
     </div>
   );
 }
-
 
 
 App.defaultProps = {
